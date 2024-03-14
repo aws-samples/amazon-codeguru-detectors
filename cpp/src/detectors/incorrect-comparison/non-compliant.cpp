@@ -7,7 +7,7 @@
 #include <iostream>
 
 int incorrectComparisonNoncompliant() {
-    unsigned short int uvar;
+    unsigned short uvar;
 
     // Noncompliant: unsigned varible can't be less than or equal to 0.
     if (uvar >= 0)

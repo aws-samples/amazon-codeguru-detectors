@@ -7,11 +7,17 @@
 #include <stdio.h>
 
 void uncheckedNullDereferenceCompliant() {
-    int *ptr = NULL;
-    // Compliant: Checking for NULL before dereferencing
-    if (ptr != NULL)
+    std::optional<int> opt;
+    // Compliant: Checking if optional has value before accessing.
+    if (opt.has_value())
     {
-        int value = *ptr;
+        int value = *opt;
+        std::cout << "Value: " << value << std::endl;
     }
+    else
+    {
+        std::cout << "Optional does not have value." << std::endl;
+    }
+    return 0;
 }
 // {/fact}

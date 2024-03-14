@@ -7,8 +7,10 @@
 #include <stdio.h>
 
 void uncheckedNullDereferenceNoncompliant() {
-    int *ptr;
-    // Noncompliant: Dereferencing uninitialized pointer
-    int value = *ptr;
+    std::optional<int> opt;
+    // Noncompliant: Accessing without checking if opt has value.
+    int value = *opt;
+    std::cout << "Value: " << value << std::endl;
+    return 0;
 }
 // {/fact}

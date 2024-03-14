@@ -7,7 +7,7 @@
 #include <iostream>
 
 int incorrectComparisonCompliant() {
-    unsigned short int uvar;
+    unsigned short uvar;
 
     // Compliant: No comparision.
     return 0;
