@@ -10,7 +10,7 @@ int IncorrectUseofGotoNonCompliant()
 {
     int n;
     // Noncompliant: `goto` function is recommended to use inside conditional statements to prevent unconditional jumps
-
+    goto ONE;
     return 0;
 ONE:
     printf("went to one\n");
