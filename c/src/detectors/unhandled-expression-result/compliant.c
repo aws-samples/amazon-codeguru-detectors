@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// {fact rule=insecure-comparison@v1.0 defects=0}
+// {fact rule=unhandled-expression-result@v1.0 defects=0}
 #include <stdio.h>
 
-int insecureComparisonCompliant(int a, int b) {
+int unhandledExpressionResultCompliant(int a, int b) {
     int result = 0;
-    // Compliant: Result is stored
+    // Compliant: Expression result is handled by veriable
     result = a + b; 
     return result;
 }
