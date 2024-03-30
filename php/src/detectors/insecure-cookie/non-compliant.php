@@ -6,5 +6,6 @@
 <?php
 
 //{fact rule=insecure-cookie@v1.0 defect=1}
+//NonCompliant: Used insecure FTP functions that transmit credentials in plain text, such as ftp_login.
 $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 //{/fact}

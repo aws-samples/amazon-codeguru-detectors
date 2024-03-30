@@ -6,5 +6,6 @@
 <?php
 
 //{fact rule=insecure-cookie@v1.0 defect=0}
+//Compliant: Used secure file transfer functions like ssh2_scp_send
 ssh2_scp_send($connection, '/local/filename', '/remote/filename', 0644);
 //{/fact}

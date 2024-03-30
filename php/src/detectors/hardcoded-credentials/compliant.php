@@ -7,6 +7,7 @@
 use Defuse\Crypto\KeyOrPassword;
 //{fact rule=hardcoded-credentials@v1.0 defect=0}
 function compliant() {
+    //Compliant: Access sensitive information like passwords directly from environment variables
     $password = $_ENV["SECRET"];
     return KeyOrPassword::createFromPassword($password);
 }
