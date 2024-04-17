@@ -8,7 +8,7 @@
 //{fact rule=secure-signal-handling@v1.0 defect=0}
 function compliant1($param)  {
     $targetPid = (int)$_GET["pid"];
-    //Compliant: kills the process with validation
+    // Compliant: kills the process with validation
     if (isValidPid($targetPid)) {
         posix_kill($targetPid, 9);
     }

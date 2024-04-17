@@ -6,6 +6,6 @@
 */
 
 //{fact rule=incorrect-comparison@v1.0 defect=1}
-//NonCompliant: Used loose equality (`==`)
+// Noncompliant: Used loose equality (`==`)
 md5("240610708") == "0";
 //{/fact}
