@@ -7,6 +7,6 @@
 */
 
 //{fact rule=open-redirect@v1.0 defect=0}
-//Compliant: Secure way to redirect users to the current script itself without opening up the possibility of an open redirect 
+// Compliant: Secure way to redirect users to the current script itself without opening up the possibility of an open redirect
 header('Location: '.$_SERVER['PHP_SELF']);
 //{/fact}
