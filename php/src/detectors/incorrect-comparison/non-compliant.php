@@ -5,7 +5,7 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-//{fact rule=incorrect-comparison@v1.0 defect=1}
+//{fact rule=incorrect-comparison@v1.0 defects=1}
 // Noncompliant: Used loose equality (`==`)
 md5("240610708") == "0";
 //{/fact}

@@ -5,7 +5,7 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-//{fact rule=insecure-hashing@v1.0 defect=1}
+//{fact rule=insecure-hashing@v1.0 defects=1}
 function nonCompliant($value) {
     // Noncompliant: Weak hash algorithm used
     $pass = hash('md5', $value);

@@ -6,7 +6,7 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-//{fact rule=improper-authentication@v1.0 defect=1}
+//{fact rule=improper-authentication@v1.0 defects=1}
 // Noncompliant: NULL values passed as password
 ldap_bind($ldapconn, NULL, NULL); //nonCompliant
 //{/fact}

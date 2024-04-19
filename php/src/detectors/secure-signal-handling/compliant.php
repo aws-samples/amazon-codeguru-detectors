@@ -5,7 +5,7 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-//{fact rule=secure-signal-handling@v1.0 defect=0}
+//{fact rule=secure-signal-handling@v1.0 defects=0}
 function compliant1($param)  {
     $targetPid = (int)$_GET["pid"];
     // Compliant: kills the process with validation

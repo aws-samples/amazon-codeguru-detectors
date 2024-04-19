@@ -5,7 +5,7 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-//{fact rule=weak-random-number-generation@v1.0 defect=1}
+//{fact rule=weak-random-number-generation@v1.0 defects=1}
 // Noncompliant: Insecure way of generating random number
 $insecurerandomNumber = mt_rand();
 //{/fact}

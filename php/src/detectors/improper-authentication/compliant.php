@@ -6,7 +6,7 @@
 */
 
 
-//{fact rule=improper-authentication@v1.0 defect=0}
+//{fact rule=improper-authentication@v1.0 defects=0}
 // Compliant: Credentials correctly passed as argument
 ldap_bind($ldapconn, $username, $password); //compliant
 //{/fact}
