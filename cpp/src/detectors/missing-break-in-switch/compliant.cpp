@@ -8,7 +8,7 @@
 
 void missingBreakInSwitchCompliant(char *data) {
     int result = security_check(data);
-    // Compliant : All cases have missing break or exit.
+    // Compliant: All cases have missing break or exit.
     switch (result) {
     case FAIL:
         printf("Security check failed!\n");
