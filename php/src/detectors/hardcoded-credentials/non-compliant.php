@@ -9,7 +9,7 @@
 
 use Defuse\Crypto\KeyOrPassword;
 
-//{fact rule=hardcoded-credentials@v1.0 defect=1}
+//{fact rule=hardcoded-credentials@v1.0 defects=1}
 function nonCompliant() {
     // NonCompliant: Stored passwords directly in the code statement
     $password = "3xAmpl3";
