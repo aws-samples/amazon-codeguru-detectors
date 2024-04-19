@@ -14,7 +14,7 @@ int sqlInjectionNoncompliant(const std::string& username, const std::string& pas
     std::string query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "';";
 
     sqlite3_stmt* stmt;
-    // Noncompliant : This code takes a username and password from the user, constructs an SQL query, and tries to authenticate the user against an SQLite database.
+    // Noncompliant: This code takes a username and password from the user, constructs an SQL query, and tries to authenticate the user against an SQLite database.
     if (sqlite3_prepare_v2(db, query.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
         if (sqlite3_step(stmt) == SQLITE_ROW) {
             std::cout << "Authentication successful.\n";
