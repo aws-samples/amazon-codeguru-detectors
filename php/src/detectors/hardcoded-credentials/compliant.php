@@ -13,3 +13,4 @@ function compliant() {
     return KeyOrPassword::createFromPassword($password);
 }
 //{/fact}
+?>

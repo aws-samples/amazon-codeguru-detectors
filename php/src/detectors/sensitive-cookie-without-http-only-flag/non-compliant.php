@@ -10,3 +10,4 @@
 // Noncompliant: http-only flag set to false
 session_set_cookie_params($lifetime, $path, $domain, true, false);
 //{/fact}
+?>

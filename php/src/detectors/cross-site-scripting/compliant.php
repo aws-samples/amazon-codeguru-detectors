@@ -11,3 +11,4 @@ function compliant() {
     print("Hello : " . htmlentities($name));
 }
 //{/fact}
+?>

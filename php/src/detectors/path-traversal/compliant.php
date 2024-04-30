@@ -15,3 +15,4 @@ if(realpath($path) !== BASE_PATH . $user_input_compliant_4) {
 }
 $json = file_get_contents($path);
 //{/fact}
+?>

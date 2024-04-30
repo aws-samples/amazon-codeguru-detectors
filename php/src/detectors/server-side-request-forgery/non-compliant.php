@@ -11,3 +11,4 @@ function nonCompliant(){
     $file = file_get_contents($_POST['r']);
 }
 //{/fact}
+?>

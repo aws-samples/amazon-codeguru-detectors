@@ -10,3 +10,4 @@
 // Noncompliant: `$_SERVER["REQUEST_URI"]` directly in the 'Location' header can potentially introduce an open redirect vulnerability
 header('Location: '.$_SERVER["REQUEST_URI"]);
 //{/fact}
+?>

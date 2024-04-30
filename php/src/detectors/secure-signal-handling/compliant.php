@@ -14,4 +14,5 @@ function compliant1($param)  {
     }
  }
 //{/fact}
+?>
 
