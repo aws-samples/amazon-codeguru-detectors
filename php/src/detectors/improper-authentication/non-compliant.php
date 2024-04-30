@@ -10,3 +10,5 @@
 // Noncompliant: NULL values passed as password
 ldap_bind($ldapconn, NULL, NULL); //nonCompliant
 //{/fact}
+
+?>

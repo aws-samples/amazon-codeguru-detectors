@@ -11,3 +11,4 @@ $fs = new Filesystem();
 // Noncompliant: `0777` as it gives full read, write, and execute permissions to all users, which can be a security risk.
 $fs->chmod("foo", 0777);
 //{/fact}
+?>

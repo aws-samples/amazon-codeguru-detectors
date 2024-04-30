@@ -9,3 +9,4 @@
 // Noncompliant: Used loose equality (`==`)
 md5("240610708") == "0";
 //{/fact}
+?>

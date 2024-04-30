@@ -10,3 +10,4 @@
 $path = '.../.../password';
 $localeFunctions = file_get_contents($path);
 //{/fact}
+?>

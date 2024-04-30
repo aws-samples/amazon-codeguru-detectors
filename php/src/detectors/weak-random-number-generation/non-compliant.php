@@ -9,3 +9,4 @@
 // Noncompliant: Insecure way of generating random number
 $insecurerandomNumber = mt_rand();
 //{/fact}
+?>

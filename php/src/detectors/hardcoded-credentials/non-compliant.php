@@ -16,3 +16,4 @@ function nonCompliant() {
     return KeyOrPassword::createFromPassword($password);
 }
 //{/fact}
+?>

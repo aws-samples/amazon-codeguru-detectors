@@ -9,3 +9,4 @@
 // Compliant: used type-safe comparison (`===`)
 md5("240610708") === "0";
 //{/fact}
+?>

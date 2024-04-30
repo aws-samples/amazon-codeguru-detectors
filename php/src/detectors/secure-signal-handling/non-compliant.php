@@ -12,3 +12,4 @@ function nonCompliant1($param)  {
     posix_kill($targetPid, 9);
 }
 //{/fact}
+?>

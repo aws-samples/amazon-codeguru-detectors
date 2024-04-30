@@ -11,3 +11,4 @@ function nonCompliant() {
     echo "Hello :".$name;
 }
 //{/fact}
+?>

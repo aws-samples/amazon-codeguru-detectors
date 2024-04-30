@@ -12,3 +12,4 @@ function nonCompliant($value) {
     $user->setPassword($pass);
 }
 //{/fact}
+?>

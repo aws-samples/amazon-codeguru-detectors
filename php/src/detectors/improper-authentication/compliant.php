@@ -10,5 +10,4 @@
 // Compliant: Credentials correctly passed as argument
 ldap_bind($ldapconn, $username, $password); //compliant
 //{/fact}
-
-
+?>
