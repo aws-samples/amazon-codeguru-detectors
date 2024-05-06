@@ -9,7 +9,7 @@
  void nonCompliantTest1() {
 	     char buffer[10];
 	     const char* data = "ThisIsALongString";
-	     // Non-compliant: Buffer overflow may occur no size check
+	     // Noncompliant: Buffer overflow may occur no size check
 	     strcpy(buffer, data);
 	 }
 	    

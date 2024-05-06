@@ -9,7 +9,7 @@
  void compliant1(EVP_PKEY_CTX *ctx)
 	 {
 	     
-	     // compliaint: 2048 bits for an RSA key
+	     // Compliant: 2048 bits for an RSA key
 	     EVP_PKEY_CTX_set_rsa_keygen_bits(ctx, 2048);
 	    
 	 }

@@ -9,7 +9,7 @@
  void noncompliant1(EVP_PKEY_CTX *ctx)
 	 {
 	 
-	     // Noncompiat: only 1024 bits for an RSA key
+	     // Noncompiant: only 1024 bits for an RSA key
 	     EVP_PKEY_CTX_set_rsa_keygen_bits(ctx, 1024);  
 	 }
 	    
