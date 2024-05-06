@@ -9,5 +9,5 @@
     // Compliant: `log_errors` is set to `'0'`, PHP will log errors to the error log file.
     ini_set('log_errors', '1');
     // {/fact}
- 
+    
 ?>

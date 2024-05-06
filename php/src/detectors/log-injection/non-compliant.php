@@ -9,6 +9,5 @@
     // Noncompliant: `log_errors` is set to `'0'`, PHP will not log errors to the error log file.
     ini_set('log_errors', '0');
     // {/fact}
+    
 ?>
-
-log-injection

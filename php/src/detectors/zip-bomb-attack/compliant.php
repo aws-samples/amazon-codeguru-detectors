@@ -9,5 +9,4 @@
  // Compliant: `zip_entry_read` will read the next 1024 bytes of data from the zip entry starting from the current position.
  zip_entry_read($zip_entry, 1024); 
 // {/fact}
-
 ?>

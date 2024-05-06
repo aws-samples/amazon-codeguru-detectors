@@ -6,7 +6,7 @@
 */
 
 // {fact rule=detect-activated-debug-feature@v1.0 defects=1}
-// Noncompliant:  Debug mode is eanbled
+// Noncompliant: Debug mode is eanbled
     config(['app.debug' => 'true']); 
 // {/fact}
 ?>

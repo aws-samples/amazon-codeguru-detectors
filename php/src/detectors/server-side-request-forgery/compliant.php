@@ -9,7 +9,6 @@
 function compliant(){
     // Compliant: Ensures the request is being sent to the expected destination
     $file = file_get_contents("index.php");
-
 }
 //{/fact}
 ?>

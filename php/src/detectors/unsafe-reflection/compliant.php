@@ -7,8 +7,8 @@
 
 //{fact rule=unsafe-reflection@v1.0 defects=0} 
 // Compliant: No reflection is used.   
-    $myController= "MyController";
-	$controller = new $myController();
+$myController= "MyController";
+$controller = new $myController();
 // {/fact}
 
 ?>
