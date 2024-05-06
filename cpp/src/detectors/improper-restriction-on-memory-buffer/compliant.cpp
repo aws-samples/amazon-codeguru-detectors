@@ -12,6 +12,5 @@
 	     // Compliant: `strncpy` used to prevent buffer overflow
 	     strncpy(buffer, data, sizeof(buffer) - 1);
 	     buffer[sizeof(buffer) - 1] = '\0';  // Null-terminate the string
-	 }
-	    
+	 }    
 // {/fact}

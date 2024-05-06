@@ -11,6 +11,5 @@
 	     const char* data = "ThisIsALongString";
 	     // Noncompliant: Buffer overflow may occur no size check
 	     strcpy(buffer, data);
-	 }
-	    
+	 }	    
 // {/fact}
