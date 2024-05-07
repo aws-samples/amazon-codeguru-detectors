@@ -26,7 +26,7 @@ func weakRandomNumberGenerationCompliant(length int) string  {
 	result := make([]byte, length)
 	max := big.NewInt(int64(len(charset)))
 	for i := range result {
-		// Noncompliant: `math.rand` is used for generating random number.
+		// Compliant: `math.rand` is not used for generating random number.
 		n, _ := crand.Int(crand.Reader, max)
 		result[i] = charset[n.Int64()]
 	}
