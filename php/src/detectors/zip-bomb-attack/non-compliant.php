@@ -6,7 +6,7 @@
 */
 
  //{fact rule=zip-bomb-attack@v1.0 defects=1}
- // Noncomplaint: The entire content of the zip entry is read and returned by `zip_entry_read`
+ // Noncompliant: The entire content of the zip entry is read and returned by `zip_entry_read`
  zip_entry_read($zip_entry, zip_entry_filesize($zip_entry)); 
 // {/fact}
 ?>

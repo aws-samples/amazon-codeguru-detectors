@@ -6,7 +6,7 @@
 */
 
     // {fact rule=log-injection@v1.0 defects=0}
-    // Compliant: `log_errors` is set to `'0'`, PHP will log errors to the error log file.
+    // Compliant: `log_errors` is set to `'1'`, PHP will log errors to the error log file.
     ini_set('log_errors', '1');
     // {/fact}
     

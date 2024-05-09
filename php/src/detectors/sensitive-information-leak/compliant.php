@@ -7,6 +7,6 @@
 
 // {fact rule=sensitive-information-leak@v1.0 defects=0}
 // Compliant: fsockopen() is used to connect to a remote host.
-$abc->fsockopen($hostname); 
+fsockopen($hostname, 80, $errno, $errstr, 20); 
 // {/fact}
 ?>

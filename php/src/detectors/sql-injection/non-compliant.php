@@ -5,7 +5,7 @@
 */
 	
     //{fact rule=sql-injection@v1.0 defects=1}
-    // Noncomplaint: tainted column name
+    // Noncompliant: tainted column name
     $tainted = $_GET['userinput'];
     $user = DB::table('users')->where($tainted, 'John')->first();
     // {/fact}
