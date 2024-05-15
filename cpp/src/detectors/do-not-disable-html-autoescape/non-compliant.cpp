@@ -6,7 +6,7 @@
 // {fact rule=do-not-disable-html-autoescape@v1.0 defects=1}
 #include <iostream>
 
-void noncompliant1() {
+void DisabledHTMLAutoEscape() {
 	   char* query = getenv("QUERY_STRING");
 	   puts("<p>Query results for ");
 	   // Noncompliant: Printing out an HTTP parameter with no escaping

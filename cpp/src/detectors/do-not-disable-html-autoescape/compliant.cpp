@@ -6,7 +6,7 @@
 // {fact rule=do-not-disable-html-autoescape@v1.0 defects=0}
 #include <iostream>
 
-void compliant1() {
+void HTMLAuoescape() {
 	   char* query = getenv("QUERY_STRING");
 	   puts("<p>Query results for ");
 	   // Compliant: Escape HTML characters before adding to a page
