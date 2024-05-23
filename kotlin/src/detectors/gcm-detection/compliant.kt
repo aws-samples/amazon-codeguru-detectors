@@ -6,7 +6,7 @@
 // {fact rule=reusing-nonce-key-in-encryption@v1.0 defects=0}
 // Compliant: GCM Cipher with new initialization vector is used
 fun compliant(clearText: String): String {
-    val cipher: Cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    val cipher: Cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
     val keySpec: SecretKeySpec= SecretKeySpec(theKey.getEncoded(), "AES")
     val theBadIV: Array<Byte> = BAD_IV.getBytes()

@@ -7,6 +7,7 @@
 // Compliant: The `httponly` attribute of cookies is set to `true`
 fun compliant(value: String, response: HttpServletResponse) {
     val cookie: Cookie = Cookie("cookie", value)
+    cookie.setSecure(true)
     cookie.setHttpOnly(true)
     response.addCookie(cookie)
 }
