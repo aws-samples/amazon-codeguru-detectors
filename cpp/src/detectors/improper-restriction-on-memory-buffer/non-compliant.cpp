@@ -6,7 +6,7 @@
 // {fact rule=improper-restriction-on-memory-buffer@v1.0 defects=1}
 #include <iostream>
 
- void nonCompliantTest1() {
+ void improperRestrictionOnMemoryBufferNoncompliant() {
 	     char buffer[10];
 	     const char* data = "ThisIsALongString";
 	     // Noncompliant: Buffer overflow may occur no size check

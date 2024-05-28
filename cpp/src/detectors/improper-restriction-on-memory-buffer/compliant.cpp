@@ -6,7 +6,7 @@
 // {fact rule=improper-restriction-on-memory-buffer@v1.0 defects=0}
 #include <iostream>
 
- void compliantTest1() {
+ void improperRestrictionOnMemoryBufferCompliant() {
 	     char buffer[20];
 	     const char* data = "ThisIsALongString";
 	     // Compliant: `strncpy` used to prevent buffer overflow

@@ -6,7 +6,7 @@
 // {fact rule=insecure-cryptography@v1.0 defects=0}
 #include <iostream>
 
- void compliant1(EVP_PKEY_CTX *ctx)
+ void insecureCryptographyCompliant1(EVP_PKEY_CTX *ctx)
 	 {
 	     
 	     // Compliant: 2048 bits for an RSA key
