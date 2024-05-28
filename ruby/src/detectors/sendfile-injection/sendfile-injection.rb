@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0
 =end
 
 # {fact rule=sendfile-injection@v1.0 defects=1}
-def download
+def send_file_injection_noncompliant
     begin
       path = "/opt/wwwdata/assets/" + params[:asset_name].to_s
       # Noncompliant: 'path' is unsanitized.
@@ -16,7 +16,7 @@ def download
  # {/fact}
  
  # {fact rule=sendfile-injection@v1.0 defects=0}
- def download
+ def send_file_injection_compliant
     begin
       path = File.expand_path("/opt/wwwdata/assets/" + params[:asset_name].to_s)
       if path.start_with?("/opt/wwwdata/assets/")
