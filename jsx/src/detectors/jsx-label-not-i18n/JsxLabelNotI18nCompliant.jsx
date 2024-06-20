@@ -5,9 +5,9 @@
 
 import { useTranslation } from 'react-i18next';
 
-const Compliant = () => {
+// {fact rule=jsx-label-not-i18n@v1.0 defects=0}
+const compliant = () => {
     const { t } = useTranslation();
-    // {fact rule=jsx-label-not-i18n@v1.0 defects=0}
     // Compliant: Translation key is used.
     return (
         <TextField
@@ -19,5 +19,5 @@ const Compliant = () => {
             onChange={(e) => setText(e.target.value)}
         />
     );
-    // {/fact}
 };
+// {/fact}

@@ -5,10 +5,10 @@
 
 import { useTranslation } from 'react-i18next';
 
+// {fact rule=jsx-label-not-i18n@v1.0 defects=1}
 const nonCompliant = () => {
     const { t } = useTranslation();
 
-    // {fact rule=jsx-label-not-i18n@v1.0 defects=1}
     // Noncompliant: Label prop of the TextField component using a hardcoded string value.
     return (
         <TextField
@@ -20,5 +20,5 @@ const nonCompliant = () => {
             onChange={e => setText(e.target.value)}
         />
     );
-    // {/fact}
 };
+// {/fact}

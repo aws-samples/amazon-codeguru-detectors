@@ -4,7 +4,7 @@
 */
 
 // {fact rule=disallow-bind@v1.0 defects=0}
-const Compliant = ({ onClick }) => {
+const compliant = ({ onClick }) => {
     // Compliant: Use `useCallback` to memoize the function.
     const memoizedOnClick = useCallback(() => onClick(), [onClick]);
     return <button onClick={memoizedOnClick}>Click me</button>;
