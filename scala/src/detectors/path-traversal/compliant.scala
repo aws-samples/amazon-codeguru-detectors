@@ -3,18 +3,20 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
+
+// {fact rule=path-traversal@v1.0 defects=0}
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
+
+
 class PathTraversalCompliant {
+  
   @throws[FileUploadException]
-    // {fact rule=path-traversal@v1.0 defects=0}
-    def compliant(req: HttpServletRequest): Unit = {
-        val upload = new ServletFileUpload(new DiskFileItemFactory())
-        val fileItems = upload.parseRequest(req)
-        for (item <- fileItems.asScala) {
-            val filename = FilenameUtils.getName(item.getName()) // Get only the filename without the path
-            // Compliant: The code uses `FilenameUtils.getName()` to extract the filename, which mitigates the risk of path traversal vulnerabilities by removing the path from the filename.
-            println("Saving " + filename + "...")
-            // Process the file using the sanitized filename
-        }
-    }
-    // {/fact}
+  override protected def doGet_compliant(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
+    val input = req.getParameter("input")
+    val baseDir = "/some/fixed/base/directory"
+    // Compliant: No HTTP request parameters are used to construct a file path.
+    val file = new File(baseDir, "abs/path")
+  }
 }
+// {/fact}

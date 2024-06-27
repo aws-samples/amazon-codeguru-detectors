@@ -12,7 +12,7 @@ object IncorrectCertificateHostnameVerificationNoncompliant {
     def nonCompliant(): Unit = {
         val email = new SimpleEmail
         email.setHostName("smtp.googlemail.com")
-        // Noncompliant: SSL is enabled.
+        // Noncompliant: SSL is enabled without server identity check.
         email.setSSLOnConnect(true)
     }
     // {/fact}

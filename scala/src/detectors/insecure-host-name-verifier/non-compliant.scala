@@ -12,7 +12,7 @@ object InsecureHostNameVerifierNoncompliant {
     // {fact rule=insecure-host-name-verifier@v1.0 defects=1}
     def nonCompliant(args: Array): Unit = {
         try {
-            // Noncompliant: Use insecure SSL protocol.
+            // Noncompliant: Use of deprecated `DefaultHttpClient` or `SSL` protocol may expose the application to known vulnerabilities and insecure communication.
             val context1 = SSLContext.getInstance("SSL")
         } catch {
             case e: NoSuchAlgorithmException =>

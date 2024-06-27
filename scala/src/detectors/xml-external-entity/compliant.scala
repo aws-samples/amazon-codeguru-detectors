@@ -8,12 +8,11 @@
 class XmlExternalEntityCompliant {
 
     def compliant(file: File) = {
-        // Compliant: External entitites are disabled when parsing the XML file.
         val docBuilderFactory = DocumentBuilderFactory.newInstance()
         val docBuilder = docBuilderFactory.newDocumentBuilder()
         docBuilder.setXIncludeAware(true)
         docBuilder.setNamespaceAware(true)
-
+        // Compliant: XML parsing is performed with appropriate configurations to disable external entity resolution.
         docBuilder.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true)
         docBuilder.setFeature("http://xml.org/sax/features/external-general-entities", false)
         docBuilder.setFeature("http://xml.org/sax/features/external-parameter-entities", false)

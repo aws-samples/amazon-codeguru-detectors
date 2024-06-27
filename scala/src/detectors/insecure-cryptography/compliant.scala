@@ -10,11 +10,13 @@ import java.security.NoSuchProviderException
 
 object InsecureCryptographyCompliant {
     // {fact rule=insecure-cryptography@v1.0 defects=0}
-    @throws[NoSuchProviderException]
     @throws[NoSuchAlgorithmException]
-    def compliant(): Unit = {
-        // Compliant: Used secure message digest algorithms.
-        MessageDigest.getInstance("sha-384", "SUN")
+    @throws[NoSuchProviderException]
+    def strongKeySizeWithProviderString = {
+        val keyGen = KeyPairGenerator.getInstance("RSA", "BC")
+        // Compliant:Key size is 2048 bits.
+        keyGen.initialize(2048)
+        keyGen.generateKeyPair
     }
     // {/fact}
 }

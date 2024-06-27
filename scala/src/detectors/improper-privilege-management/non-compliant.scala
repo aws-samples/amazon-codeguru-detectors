@@ -12,7 +12,7 @@ class ImproperPrivilegeManagementNoncompliant extends Policy {
     // {fact rule=improper-privilege-management@v1.0 defects=1}
     def nonCompliant(cs: CodeSource): Unit = {
             val pc: PermissionCollection = super.getPermissions(cs)
-            // Noncompliant: Granted potentially unsafe permission.
+            // Noncompliant: This permission is insecure.
             pc.add(new ReflectPermission("suppressAccessChecks"))
     }
     // {/fact}

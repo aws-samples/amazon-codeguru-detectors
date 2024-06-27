@@ -9,7 +9,7 @@ class UntrustedDataInHttpSessionNoncompliant {
   
   def nonCompliant(req: HttpServletRequest): Unit = {
     val input = req.getParameter("input")
-    // Noncompliant: Unsanitized user input is used in here.
+    // Noncompliant: Unsanitized user input is used inside `setAttribute` method.
     req.getSession.setAttribute(input, "true")
   }
 }

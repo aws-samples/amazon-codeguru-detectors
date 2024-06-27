@@ -10,11 +10,13 @@ import java.security.NoSuchProviderException
 
 object InsecureCryptographyNoncompliant {
     // {fact rule=insecure-cryptography@v1.0 defects=1}
-    @throws[NoSuchProviderException]
     @throws[NoSuchAlgorithmException]
-    def nonCompliant(): Unit = {
-        // Noncompliant: Used insecure message digest algorithms.
-        MessageDigest.getInstance("MD5", "SUN")
+    @throws[NoSuchProviderException]
+    def weakKeySizeWithProviderString = {
+        val keyGen = KeyPairGenerator.getInstance("RSA", "BC")
+        // Noncompliant: A small key size makes the ciphertext vulnerable to brute force attacks.
+        keyGen.initialize(1024)
+        keyGen.generateKeyPair
     }
     // {/fact}
 }

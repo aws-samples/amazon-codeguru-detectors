@@ -19,9 +19,13 @@ class HttpResponseSplittingCompliant extends HttpServlet {
     @throws[IOException]
     override protected def compliant(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
         val input = req.getParameter("input")
+        val c = new Cookie("name", null)
         val sanitized = org.apache.commons.text.StringEscapeUtils.unescapeJava(input)
         // Compliant: The cookie value is set to the sanitized input parameter.
-        resp.setHeader("test3", sanitized)
+        c.setValue(sanitized)
+        c.setHttpOnly(true)
+        c.setSecure(true)
+        resp.addCookie(c)
     }
     // {/fact}
 }

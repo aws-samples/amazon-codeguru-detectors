@@ -5,10 +5,16 @@
 
 
 // {fact rule=open-redirect@v1.0 defects=1}
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
+
 class OpenRedirectNoncompliant extends HttpServlet {
-    def nonCompliant(resp: HttpServletResponse, url: String): Unit = {
-    // Noncompliant: Untrusted user input used in `resp.addHeader`.
-    if (url != null)  resp.addHeader("Location", url)    
-  }
+    def nonCompliant(req: HttpServletRequest, res: HttpServletResponse): Unit = {
+      val forwardedUrl = req.getHeader("Forwarded")
+      if (forwardedUrl != null && !forwardedUrl.isEmpty) {
+        // Noncompliant: Using user-controlled input in the Forwarded header for redirection
+        res.sendRedirect(forwardedUrl)
+      }
+    }
 }
 // {/fact}

@@ -17,13 +17,6 @@ class TemplateInjectionCompliant {
   def compliant(inputFile: String): String = {
     val engine = new PebbleEngine.Builder().build
     var compiledTemplate: PebbleTemplate = null
-    try {
-      compiledTemplate = engine.getTemplate(inputFile)
-    } catch {
-      case e: Exception =>
-        e.printStackTrace()
-        throw new IOException("Error while loading template", e)
-    }
     val context = new HashMap[String, Object]
     context.put("name", "Shivam")
     val writer = new StringWriter

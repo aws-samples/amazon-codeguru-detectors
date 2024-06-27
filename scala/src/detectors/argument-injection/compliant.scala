@@ -16,7 +16,7 @@ class ArgumentInjectionCompliant extends HttpServlet {
         try {
         val item = request.getParameter("item")
 
-        // Compliant: URLEncoder.encode is used to encode the item.
+        // Compliant: `URLEncoder.encode` is used to encode user input.
         val httpget2 = new HttpGet("http://host.com?param=" + URLEncoder.encode(item))
         }
     }

@@ -13,7 +13,7 @@ class IncorrectPermissionAssignmentNoncompliant {
     @throws[IOException]
     def nonCompliant(path: Nothing): Unit = {
         val perms = new java.util.HashSet[PosixFilePermission]()
-        // Noncompliant: Permissions are not assigned correctly.
+        // Noncompliant: Permissions may allow unintended users to access files.
         val perms = PosixFilePermissions.fromString("rw-rw-rw-")
         Files.setPosixFilePermissions(path, perms)
     }

@@ -8,7 +8,7 @@
 class XmlExternalEntityNoncompliant {
 
   def nonCompliant(file: File) = {
-    // Noncompliant: External entitites are enabled when parsing the XML file.
+    // Noncompliant: XML parsing is not performed with appropriate configurations to disable external entity resolution.
     val docBuilderFactory = DocumentBuilderFactory.newInstance()
     val docBuilder = docBuilderFactory.newDocumentBuilder()
     val doc = docBuilder.parse(file)
