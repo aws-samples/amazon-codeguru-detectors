@@ -10,6 +10,6 @@ fun compliant() {
 
     val command = "ls -l " + directory
     val r: Runtime = Runtime.getRuntime()
-    val process = r.getRuntime().exec(command)  
+    val process = r.exec(command)  
 }
 // {/fact}

@@ -4,7 +4,7 @@
 */
 
 // {fact rule=improper-verification-of-intent@v1.0 defects=0}
-// Compliant: Intent receiver method is registered with limiting the broadcast permission
+// Compliant: Intent receiver method is registered with a limiting broadcasting permission.
 fun compliant(
     context: Context, receiver: BroadcastReceiver?,
     filter: IntentFilter?,

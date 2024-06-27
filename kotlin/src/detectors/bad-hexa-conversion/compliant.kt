@@ -4,7 +4,7 @@
 */
 
 // {fact rule=incorrect-type-conversion@v1.0 defects=0}
-// Compliant: Using `String.format(\"%02X\",...)` which does not creates weak hash
+// Compliant: Using `String.format(\"%02X\",...)` which does not creates a weak hash
 fun compliant(password: String): String {
     val md: MessageDigest = MessageDigest.getInstance("SHA-1")
     val resultBytes: Array<Byte> = md.digest(password.getBytes("UTF-8"))

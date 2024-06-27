@@ -4,18 +4,21 @@
 */
 
 // {fact rule=reusing-nonce-key-in-encryption@v1.0 defects=1}
-// Noncompliant: GCM Cipher with reused initialization vector is detected
+// Noncompliant: GCM Cipher with reused initialization vector `theInnerIV2` is detected.
 fun noncompliant(clearText: String): String {
-    val cipher: Cipher = Cipher.getInstance("AES/GCM/NoPadding")
-    val keySpec: SecretKeySpec= SecretKeySpec(theKey.getEncoded(), "AES")
-    val theBadIV: Array<Byte> = BAD_IV.getBytes()
+    val cipher1: Cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    val cipher2: Cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    val keySpec: SecretKeySpec = SecretKeySpec(theKey.getEncoded(), "AES")
 
-    val gcmParameterSpec: GCMParameterSpec = GCMParameterSpec(GCM_TAG_LENGTH * 8, theIV)
-    cipher.init(Cipher.ENCRYPT_MODE, keySpec, gcmParameterSpec)
+    private val theInnerIV2: Array<Byte>
 
-    val cipherText: Array<Byte> = cipher.doFinal(clearText.getBytes())
+    val gcmParameterSpec: GCMParameterSpec = GCMParameterSpec(GCM_TAG_LENGTH * 8, theInnerIV2)
+    cipher1.init(Cipher.DECRYPT_MODE, keySpec, gcmParameterSpec)
+    val gcmParameterSpec: GCMParameterSpec = GCMParameterSpec(GCM_TAG_LENGTH * 8, theInnerIV2)
+    cipher2.init(Cipher.DECRYPT_MODE, keySpec, gcmParameterSpec)
 
-    val encoded = base64.getEncoder().encodeToString(cipherText)
-    return encoded
+    val decoded: Array<Byte> = Base64.getDecoder().decode(cipherText)
+    val decryptedText: Array<Byte> = cipher.doFinal(decoded)
+    return String(decryptedText)
 }
 // {/fact}

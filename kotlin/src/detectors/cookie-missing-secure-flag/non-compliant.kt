@@ -4,7 +4,7 @@
 */
 
 // {fact rule=insecure-cookie@v1.0 defects=1}
-// Noncompliant:  The `setSecure` attribute of cookies is set to `false`
+// Noncompliant:  The `setSecure` attribute of a cookie is set to `false`
 fun noncompliant() {
     var cookie: Cookie = Cookie("cookie", value)
     cookie.setSecure(false)

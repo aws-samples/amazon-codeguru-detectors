@@ -4,7 +4,7 @@
 */
 
 // {fact rule=insecure-bean-validation@v1.0 defects=1}
-// Noncompliant: Unsafe Bean properties are passed directly to `buildConstraintViolationWithTemplate`
+// Noncompliant: Controlling the content of the message template supplied to `ConstraintValidatorContext.buildConstraintViolationWithTemplate()` parameter can result in arbitrary Java code execution.
 fun noncompliant(request: HttpServletRequest, response: HttpServletResponse, constraintContext: ConstraintValidatorContext) {
     val constraintViolation: String = request.getAttribute("constraintViolation").toString()
     constraintContext.buildConstraintViolationWithTemplate(constraintViolation)

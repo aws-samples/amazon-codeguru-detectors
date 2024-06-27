@@ -4,7 +4,7 @@
 */
 
 // {fact rule=incorrect-type-conversion@v1.0 defects=1}
-// Noncompliant: Using `Integer.toHexString()` which creates weak hash
+// Noncompliant: Using `Integer.toHexString()` which creates a weak hash
 fun noncompliant(password: String): String {
     val md: MessageDigest = MessageDigest.getInstance("SHA-1")
     val resultBytes: Array<Byte> = md.digest(password.getBytes("UTF-8"))

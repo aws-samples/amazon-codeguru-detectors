@@ -9,7 +9,6 @@ fun compliant(clearText: String): String {
     val cipher: Cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
     val keySpec: SecretKeySpec= SecretKeySpec(theKey.getEncoded(), "AES")
-    val theBadIV: Array<Byte> = BAD_IV.getBytes()
 
     private val theInnerIV: Array<Byte>
     val gcmParameterSpec: GCMParameterSpec = GCMParameterSpec(GCM_TAG_LENGTH * 8, theInnerIV)

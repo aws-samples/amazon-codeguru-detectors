@@ -4,7 +4,7 @@
 */
 
 // {fact rule=hardcoded-credentials@v1.0 defects=0}
-// Compliant: Password is not hardcoded.
+// Compliant: Password is retrieved from environment variables.
 fun compliant() {
     val username = System.getenv("SSH_USERNAME")
     val password = System.getenv("SSH_PASSWORD")
