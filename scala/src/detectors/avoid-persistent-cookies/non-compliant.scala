@@ -3,20 +3,18 @@
 *  SPDX-License-Identifier: Apache-2.0
 */
 
-import play.api.mvc.{Cookie => PlayCookie, _}
-import javax.servlet.http.{Cookie => ServletCookie, HttpServletResponse}
+import javax.servlet.http.Cookie
+import javax.servlet.http.HttpServletResponse
 
-class AvoidPersistentCookiesNoncompliant @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
-
-  // {fact rule=avoid-persistent-cookies@v1.0 defects=1}
-  def nonCompliant(res: HttpServletResponse, name: String, value: String, secure: Boolean = true, maxAge: Int = 60, httpOnly: Boolean = true): Unit = {
-    val cookie = new Cookie("key", "value")
-    // Noncompliant: Cookie `setSecure` method is set to false.
-    cookie.setSecure(false)
-    cookie.setMaxAge(60)
-    cookie.setHttpOnly(true)
-    res.addCookie(cookie)
-  }
-  // {/fact}
-
+class AvoidPersistentCookiesNoncompliant {
+    // {fact rule=avoid-persistent-cookies@v1.0 defects=1}
+    def nonCompliant(res: HttpServletResponse): Unit = {
+        val cookie = new Cookie("key", "value")
+        cookie.setSecure(true)
+        cookie.setHttpOnly(true)
+        // Noncompliant: MaxAge set to one year.
+        cookie.setMaxAge(31536000)
+        res.addCookie(cookie)
+    }
+    // {/fact}
 }
