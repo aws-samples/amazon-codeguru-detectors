@@ -8,7 +8,7 @@
 
 int unhandledExpressionResultCompliant(int a, int b) {
     int result = 0;
-    // Compliant: Expression result is handled by veriable
+    // Compliant: Expression result is handled by variable
     result = a + b; 
     return result;
 }

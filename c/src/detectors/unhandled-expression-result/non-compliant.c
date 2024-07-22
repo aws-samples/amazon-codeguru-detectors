@@ -8,7 +8,7 @@
 
 int unhandledExpressionResultNonCompliant(int a, int b) {
     int result = 0;
-    // Noncompliant: Unnecessary operation, expression result is not handled by any veriable here
+    // Noncompliant: Unnecessary operation, expression result is not handled by any variable here
     a + b; 
     return result;
 }
