@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-use-of-if-and-then defects=1}
+# {fact rule=use-of-if-and-then@v1.0 defects=1}
 
 # Noncompliant: Incorrectly uses test brackets around a command.
 if [ ls -l /etc/passwd ]

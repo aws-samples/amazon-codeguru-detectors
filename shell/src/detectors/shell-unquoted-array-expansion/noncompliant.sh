@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-unquoted-array-expansion defects=1}
+# {fact rule=unquoted-array-expansion@v1.0 defects=1}
 
 # Noncompliant: Unquoted array expansion can lead to word splitting and globbing.
 rm $@

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-unnecessary-variable-expansion defects=1}
+# {fact rule=unnecessary-variable-expansion@v1.0 defects=1}
 
 # Noncompliant: Unnecessary use of $ in arithmetic context.
 total=$((${count} + ${offset}))

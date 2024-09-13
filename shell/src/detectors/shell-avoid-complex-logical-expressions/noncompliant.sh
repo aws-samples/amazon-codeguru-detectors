@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-avoid-complex-logical-expressions defects=1}
+# {fact rule=avoid-complex-logical-expressions@v1.0 defects=1}
 
 # Noncompliant: This construct can lead to unexpected behavior.
 file="/path/to/important/file.txt"

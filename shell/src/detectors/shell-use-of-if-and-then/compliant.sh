@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-use-of-if-and-then defects=0}
+# {fact rule=use-of-if-and-then@v1.0 defects=0}
 
 # Compliant: Directly uses the command in the `if` statement.
 if ls -l /etc/passwd

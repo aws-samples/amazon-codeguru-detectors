@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-ps-grep-alternative defects=0}
+# {fact rule=ps-grep-alternative@v1.0 defects=0}
 
 # Compliant: Using `pgrep` instead of grepping `ps` output.
 if pgrep -x "apache2" > /dev/null; then

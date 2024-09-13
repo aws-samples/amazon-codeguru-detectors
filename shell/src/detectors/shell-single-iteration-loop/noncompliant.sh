@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-single-iteration-loop defects=1}
+# {fact rule=single-iteration-loop@v1.0 defects=1}
 
 # Noncompliant: This loop will only run once.
 for file in myfile.txt

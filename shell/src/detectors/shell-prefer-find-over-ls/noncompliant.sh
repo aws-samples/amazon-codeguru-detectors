@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-prefer-find-over-ls defects=1}
+# {fact rule=prefer-find-over-ls@v1.0 defects=1}
 
 # Noncompliant: ls output can be inconsistent and break with special characters
 ls -l | grep 'somefile*' | grep '\.log$'

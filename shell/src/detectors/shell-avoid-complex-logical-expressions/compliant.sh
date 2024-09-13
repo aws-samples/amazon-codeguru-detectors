@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-avoid-complex-logical-expressions defects=0}
+# {fact rule=avoid-complex-logical-expressions@v1.0 defects=0}
 
 # Compliant: Using proper `if-then-else` construct for safety.
 file="/path/to/important/file.txt"
