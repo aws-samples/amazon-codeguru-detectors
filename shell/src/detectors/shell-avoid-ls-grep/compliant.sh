@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-avoid-ls-grep defects=0}
+# {fact rule=avoid-ls-grep@v1.0 defects=0}
 
 # Compliant: Using glob pattern matching handles special characters safely.
 echo "Files containing 'config' in the current directory:"

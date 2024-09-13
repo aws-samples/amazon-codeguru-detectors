@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-read-lines-with-while-loop defects=0}
+# {fact rule=read-lines-with-while-loop@v1.0 defects=0}
 
 # Compliant: while read loop preserves whitespace and handles special characters.
 echo "Processing lines from file.txt:"

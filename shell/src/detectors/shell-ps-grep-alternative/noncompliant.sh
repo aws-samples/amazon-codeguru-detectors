@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-ps-grep-alternative defects=1}
+# {fact rule=ps-grep-alternative@v1.0 defects=1}
 
 # Noncompliant: Grepping `ps` output.
 if ps aux | grep -v grep | grep "apache2" > /dev/null; then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-unquoted-special-parameters defects=0}
+# {fact rule=unquoted-special-parameters@v1.0 defects=0}
 
 # Compliant: Preserves arguments with spaces.
 copy_files() {
