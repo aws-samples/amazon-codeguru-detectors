@@ -17,7 +17,7 @@ resource "aws_wafv2_web_acl" "default" {
     override_action {
       none {}
     }
-    # Non-compliant: `visibility_config` is not defined.
+    # Noncompliant: `visibility_config` is not defined.
     statement {
       rule_group_reference_statement {
         arn = aws_wafv2_rule_group.x_always_block.arn
