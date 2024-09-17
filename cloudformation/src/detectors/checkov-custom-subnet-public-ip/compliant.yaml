@@ -10,6 +10,6 @@ Resources:
         Ref: myVPC
       CidrBlock: 10.0.0.0/24
       AvailabilityZone: "us-east-1a"
-      # Complaint: `MapPublicIpOnLaunch` is set to `false`.
+      # Compliant: `MapPublicIpOnLaunch` is set to `false`.
       MapPublicIpOnLaunch: false
 # {/fact}
