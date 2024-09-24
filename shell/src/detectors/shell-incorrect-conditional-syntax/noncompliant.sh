@@ -1,6 +1,6 @@
 #!/bin/bash
 	 
-# {fact rule=shell-incorrect-conditional-syntax defects=1}
+# {fact rule=incorrect-conditional-syntax@v1.0 defects=1}
 
 # Noncompliant: Uses `else if` which is not valid shell syntax for alternative conditions.
 if [ "$fruit" = "apple" ]

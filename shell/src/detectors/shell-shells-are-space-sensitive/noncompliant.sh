@@ -1,6 +1,6 @@
 #!/bin/bash
 	 
-# {fact rule=shell-shells-are-space-sensitive defects=1}
+# {fact rule=shells-are-space-sensitive@v1.0 defects=1}
 
 # Noncompliant: `<<(cmd)` is invalid.
 while read -r line; do

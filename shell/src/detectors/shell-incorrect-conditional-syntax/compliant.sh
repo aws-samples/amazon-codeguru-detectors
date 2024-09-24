@@ -1,6 +1,6 @@
 #!/bin/bash
 	 
-# {fact rule=shell-incorrect-conditional-syntax defects=0}
+# {fact rule=incorrect-conditional-syntax@v1.0 defects=0}
 
 # Compliant: Uses `elif` for proper alternative condition checking in shell scripts.
 if [ "$fruit" = "apple" ]

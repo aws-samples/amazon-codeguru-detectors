@@ -1,4 +1,4 @@
-# {fact rule=shell-remove-leading-spaces-before-shebang defects=1}
+# {fact rule=remove-leading-spaces-before-shebang@v1.0 defects=1}
 	 
 # Noncompliant: Leading spaces before the shebang.
   #!/bin/bash

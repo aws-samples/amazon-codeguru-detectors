@@ -1,4 +1,4 @@
-# {fact rule=shell-shebang-syntax-correction defects=1}
+# {fact rule=shebang-syntax-correction@v1.0 defects=1}
 	 
 # Noncompliant: There are spaces in between `#` and `!` in the shebang.
 # !/bin/bash
