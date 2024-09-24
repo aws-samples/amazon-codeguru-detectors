@@ -12,7 +12,7 @@ Resources:
           KmsKeyId: "KmsKeyId"
           ReturnConnectionPasswordEncrypted: True
         EncryptionAtRest:
-          # Nonompliant: Glue Data Catalog Encryption is disabled.
+          # Noncompliant: Glue Data Catalog Encryption is disabled.
           CatalogEncryptionMode: "Disabled"
           SseAwsKmsKeyId: "SseAwsKmsKeyId"
 # {/fact}

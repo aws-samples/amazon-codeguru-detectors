@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# {fact rule=shell-command-substitution-syntax defects=1}
+# {fact rule=command-substitution-syntax@v1.0 defects=1}
 
-# Vulnerable: Backticks are legacy syntax and hard to nest.
+# Noncompliant: Backticks are legacy syntax and hard to nest.
 current_dir=`pwd`
 
 # {/fact}

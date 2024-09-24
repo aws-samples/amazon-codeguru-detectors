@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# {fact rule=shell-read-lines-with-while-loop defects=1}
+# {fact rule=read-lines-with-while-loop@v1.0 defects=1}
 
 # Noncompliant: Word splitting and glob expansion can break on special characters.
 echo "Processing lines from file.txt:"
