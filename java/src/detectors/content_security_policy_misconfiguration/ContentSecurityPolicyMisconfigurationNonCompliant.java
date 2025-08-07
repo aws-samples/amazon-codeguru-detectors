@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ContentSecurityPolicyMisconfigurationNonCompliant {
     
     public void nonCompliant(HttpServletResponse response) {
-        // Noncompliant: Using wildcard in script-src directive.
+        // Noncompliant: Using `wildcard` in `script-src` directive.
         response.setHeader("Content-Security-Policy", 
 	            "default-src 'self'; script-src *; style-src 'self'; frame-ancestors 'none'");
     }

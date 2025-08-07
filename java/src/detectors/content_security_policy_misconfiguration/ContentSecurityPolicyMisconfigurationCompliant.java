@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ContentSecurityPolicyMisconfigurationCompliant {
     
     public void compliant(HttpServletResponse response) {
-        // Compliant: Properly configured CSP with no wildcards.
+        // Compliant: Properly configured `CSP` with `no wildcards`.
         response.setHeader("Content-Security-Policy", 
 	             "default-src 'self'; script-src 'self' https://trusted-cdn.com; frame-ancestors 'none'");
     }

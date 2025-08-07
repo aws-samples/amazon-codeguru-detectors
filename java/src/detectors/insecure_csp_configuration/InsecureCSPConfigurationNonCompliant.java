@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class InsecureCSPConfigurationNonCompliant {
 
     public void nonCompliant(HttpServletResponse response) {
-        // Noncompliant: Completely missing Content-Security-Policy header.
+        // Noncompliant: Completely missing `Content-Security-Policy` header.
         response.setHeader("X-Frame-Options", "DENY");
         response.setHeader("X-XSS-Protection", "1; mode=block");
     }
