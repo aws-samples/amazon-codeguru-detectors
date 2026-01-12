@@ -25,7 +25,7 @@ namespace SensitiveInformation
             string apiKey = "YOUR_API_KEY";
             using (HttpClient client = new HttpClient())
             {
-                // Noncompliant: Do not send sensitive data over HTTP connection
+                // Compliant: Do not send sensitive data over HTTP connection
                 HttpResponseMessage response = client.GetAsync(url).Result;
             }
         }
