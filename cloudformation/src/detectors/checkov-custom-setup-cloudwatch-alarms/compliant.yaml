@@ -12,6 +12,7 @@ Resources:
       Statistic: Sum
       Period: 300
       EvaluationPeriods: 2
+      # Compliant: `DatapointsToAlarm` and `Threshold` are set.
       DatapointsToAlarm: 2
       Threshold: 80
       AlarmDescription: "Compliant alarm for read capacity monitoring"
