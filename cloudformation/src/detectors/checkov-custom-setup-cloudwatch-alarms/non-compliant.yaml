@@ -6,6 +6,7 @@ Resources:
   NonCompliantReadCapacityAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
+      # Noncompliant: `DatapointsToAlarm` is missing.
       AlarmName: !Sub '${TableName}-NonCompliantReadCapacity'
       MetricName: ConsumedReadCapacityUnits
       Namespace: AWS/DynamoDB
