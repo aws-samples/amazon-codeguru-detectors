@@ -20,12 +20,17 @@ namespace Cryptography
         // {fact rule=insecure-cryptography@v1.0 defects=0}
         public void InsecureCryptographyCompliant()
         {
-            Aes aeskey = Aes.Create();
-            // Compliant: `CBC` is secure encryption mode.
-            aeskey.Mode = CipherMode.CBC;
-            using var encryptor = aeskey.CreateEncryptor();
+            // Compliant: AES-GCM provides authenticated encryption.
+            byte[] key = new byte[32];
+            RandomNumberGenerator.Fill(key);
+            byte[] nonce = new byte[AesGcm.NonceByteSizes.MaxSize];
+            RandomNumberGenerator.Fill(nonce);
             byte[] msg = new byte[32];
-            var cipherText = encryptor.TransformFinalBlock(msg, 0, msg.Length);
+            byte[] cipherText = new byte[msg.Length];
+            byte[] tag = new byte[AesGcm.TagByteSizes.MaxSize];
+
+            using var aesGcm = new AesGcm(key, AesGcm.TagByteSizes.MaxSize);
+            aesGcm.Encrypt(nonce, msg, cipherText, tag);
         }
         // {/fact}
     }
