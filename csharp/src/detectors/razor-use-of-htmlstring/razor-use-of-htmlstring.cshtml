@@ -1,0 +1,31 @@
+	  <!-- this is a test for C# from the community contributor and is left as-is for future forking into C# specific rules -->
+      <!-- #{fact rule=razor-use-of-html-string@v1.0 defects=1} -->
+	  public void RenderDescription(string description)
+	  {
+	      var newcontent = new Microsoft.AspNetCore.Html.HtmlString(description);
+	  }
+	 
+	 
+	  <div>
+	 	<div>
+	         <!-- Noncompliant: Improper Encoding or Escaping of Output -->
+	 		<div>@(new HtmlString(description))</div>
+	 	</div>
+	 </div>
+	 <!--{fact}-->
+
+	 <!-- this is a test for C# from the community contributor and is left as-is for future forking into C# specific rules -->
+      <!-- #{fact rule=razor-use-of-html-string@v1.0 defects=0} -->
+	  public void RenderDescription(string description)
+	  {
+	      var newcontent = new Microsoft.AspNetCore.Html.HtmlString(WebUtility.HtmlEncode(description));
+	  }
+	 
+	 
+	  <div>
+	 	<div>
+	         <!-- Compliant: Proper Encoding or Escaping of Output -->
+	 		<div>@(new HtmlString(HttpUtility.HtmlEncode(description)))</div>
+	 	</div>
+	 </div>
+ <!--{fact}-->
