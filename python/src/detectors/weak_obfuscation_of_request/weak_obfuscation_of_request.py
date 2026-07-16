@@ -13,3 +13,14 @@ def http_request_noncompliant(username, password, url):
     http = urllib3.PoolManager()
     response = http.request('GET', url, headers=headers)
 # {/fact}
+
+# {fact rule=weak-obfuscation-of-request@v1.0 defects=0}
+def http_request_compliant(authorization, url):
+    import urllib3 as urllib3
+    import ssl
+    # Compliant: no weak encoding used for basic authentication.
+    headers = {'Authorization': 'Basic %s' % authorization}
+    urllib3.disable_warnings()
+    http = urllib3.PoolManager(ssl_minimum_version=ssl.TLSVersion.TLSv1_2)
+    response = http.request('GET', url, headers=headers)
+# {/fact}
